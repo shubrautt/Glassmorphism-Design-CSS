@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <header class="nav">
+            <div class="menu">
+                <a href="#" class="active">Discover</a>
+                <a href="#">Apps</a>
+                <a href="#">Movies</a>
+                <a href="#">Dashboard</a>
+                <div class="searchBox">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </header>
+        <div class="main">
+        <div class="trendingMovies movies">
+            <p>Trending Movies</p>
+            <div class="cards">
+                <div class="card" data-text="Avengers">
+                    <img src="./hollwoodMovies/avg.jpg" alt="" >
+                </div>
+                <div class="card" data-text="Venom">
+                    <img src="./hollwoodMovies/venom.jpg" alt="" >
+                </div>
+                <div class="card" data-text="London Has Fallen">
+                    <img src="./hollwoodMovies/LondonHasFallen.jpg" alt="" >
+                </div>
+                <div class="card" data-text="Dracula">
+                    <img src="./hollwoodMovies/dracula.jpg" alt="" >
+                </div>
+                <div class="card" data-text="Hotel Transylvania 2">
+                    <img src="./hollwoodMovies/HotelTransylvania2.jpg" alt="" >
+                </div>
+                <div class="card" data-text="The Expendables 2">
+                    <img src="./hollwoodMovies/TheExpendables2.jpg" alt="" >
+                </div>
+                <div class="card" data-text="Point Break">
+                    <img src="./hollwoodMovies/PointBreak.jpg" alt="" >
+                </div>
+            </div>
+        </div>
+
+        <div class="bollywoodMovies movies">
+            <p>Bollywood Movies</p>
+            <div class="cards">
+                <div class="card" data-text="De De Pyaar De">
+                    <img src="./bollywoodMovies/DeDePyaarDe.jpg" alt="" >
+                </div>
+                <div class="card" data-text="Badrinath Ki Dulhania">
+                    <img src="./bollywoodMovies/BadrinathKiDulhania.jfif" alt="" >
+                </div>
+                <div class="card" data-text="Rocky Handsome">
+                    <img src="./bollywoodMovies/RockyHandsome.jpg" alt="" >
+                </div>
+                <div class="card" data-text="Rustom">
+                    <img src="./bollywoodMovies/Rustom.jpg" alt="" >
+                </div>
+                <div class="card" data-text="Two States">
+                    <img src="./bollywoodMovies/TwoStates.jfif" alt="" >
+                </div>
+                <div class="card" data-text="Bhuj">
+                    <img src="./bollywoodMovies/Bhuj.jpg" alt="" >
+                </div>
+                <div class="card" data-text="Welcome">
+                    <img src="./bollywoodMovies/Welcome.jpg" alt="" >
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="webSeries movies">
+            <p>Web Series</p>
+            <div class="cards">
+                <div class="card" data-text="Permanent Roommates">
+                    <img src="./webSeries/PermanentRoommates.webp" alt="" >
+                </div>
+                <div class="card" data-text="Flames">
+                    <img src="./webSeries/Flames.jpg" alt="" >
+                </div>
+                <div class="card" data-text="Im Mature">
+                    <img src="./webSeries/ImMature.webp" alt="" >
+                </div>
+                <div class="card" data-text="KotaFactory">
+                    <img src="./webSeries/KotaFactory.jpg" alt="" >
+                </div>
+            </div>
+        </div>
+        
+            
+    </div>
+    </div>
+
+
+    <script>
+        const a = document.querySelectorAll("a");
+
+        a.forEach(e => {
+            e.addEventListener("click", (e) => {
+                console.log(e.target.classList);
+                a.forEach(e => {
+                    e.classList.remove("active");
+                })
+                if (!(e.target.classList.contains("active"))) {
+                    e.target.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("bg.jpg");
+    background-size: cover;
+}
+.container{
+    width: 85%;
+    height: 85%;
+    background-color: rgba(16 18 27 / 40%);
+    border-radius: 10px;
+    backdrop-filter: blur(20px);   
+    position: relative; 
+}
+/* nav */
+.nav{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.123);
+}
+.menu{
+    height: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.295);
+    border-radius: 50px;
+}
+a{
+    color: rgb(204, 204, 204);
+    border-radius: 50px;
+    padding: 0.6em 2em;
+    background: none;
+    text-decoration: none;
+    transition: all .2s;
+}
+a.active{
+    color: rgb(22, 22, 22);
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.178);
+}
+.searchBox{
+    padding: 1em 1.8em;
+    color: white;
+}
+.main{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    overflow-x: auto;
+}
+.main::-webkit-scrollbar{
+    display: none;
+}
+/* trendingMovies */
+.movies{
+    width: 95%;
+    margin: 1em auto;
+    color: rgb(204, 204, 204);
+}
+.movies .cards{
+    margin-top: 0.6em;
+    padding: 0.5em 0 2em 0;
+    display: flex; 
+    overflow-y: auto; 
+}
+.movies .cards::-webkit-scrollbar{
+    display: none;
+}
+.movies .cards .card{
+    flex-shrink: 0;
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: all .4s;
+    margin-right: 1em;
+}
+.card::before{
+    content: attr(data-text);
+    position: absolute;
+    left: 45%;
+    bottom: -15%;   
+    transform: translate(-45%);
+    font-size: .7em;
+    opacity: 0;
+    transition: all .4s;
+}
+.card:hover::before{
+    opacity: 1;
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.178);
+}
+.movies .cards .card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+}
